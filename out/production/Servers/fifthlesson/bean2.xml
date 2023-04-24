@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userService" class = "fifthlesson.server.UserService">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    <bean id="userDao" class = "fifthlesson.dao.UserDaoImp"></bean>
+
+    <bean id="emp" class = "fifthlesson.spring5.Emp">
+        <property name="ename" value="李四"></property>
+        <property name="gender" value="male"></property>
+        <property name="dept" ref="dept"></property>
+        <!--<property name="dept.dname" value="王五"></property>-->
+    </bean>
+    <bean id="dept"  class="fifthlesson.spring5.Dept">
+        <property name="dname" value="张三"></property>
+    </bean>
+
+    <bean id="stu" class="sixthlesson.spring5.Stu">
+        <property name="strs" value="张三"></property>
+    </bean>
+</beans>

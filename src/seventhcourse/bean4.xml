@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="order" class="seventhcourse.spring5.Order" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="name" value="张三"></property>
+    </bean>
+
+    <bean id="mybeanpost" class="seventhcourse.spring5.MyBeanPost">
+
+    </bean>
+-->
+    <bean id="emp" class="seventhcourse.spring5.EMP" autowire="byType"></bean>
+
+    <bean id="dept" class="seventhcourse.spring5.Dept"></bean>
+
+</beans>

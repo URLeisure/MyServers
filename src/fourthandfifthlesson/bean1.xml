@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id = "user" class = "fourthandfifthlesson.spring5.User"></bean>
+    <bean id = "book" class = "fourthandfifthlesson.spring5.Book">
+        <property name="name" value="java"></property>
+        <property name="author" value="张三"></property>
+        <property name="address" value = "&lt;哈尔滨&gt;"></property>
+    </bean>
+    <bean id = "order" class = "fourthandfifthlesson.spring5.Order">
+        <constructor-arg name="name" value="石某人"/>
+        <constructor-arg name="address" value="哈理工"/>
+    </bean>
+
+    <bean id = "book1" class = "fourthandfifthlesson.spring5.Book" p:name="nn" p:author="aa"/>
+</beans>

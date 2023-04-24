@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id = "stu" class = "sixthlesson.spring5.Stu">
+        <property name="strs">
+            <array>
+                <value>aa</value>
+                <value>bb</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>cc</value>
+                <value>dd</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="k1" value="v1"></entry>
+                <entry key="k2" value="v2"></entry>
+            </map>
+        </property>
+        <property name="set">
+            <set>
+                <value>ee</value>
+                <value>ff</value>
+            </set>
+        </property>
+        <property name="courses">
+            <list>
+                <ref bean = "course1"></ref>
+                <ref bean = "course2"></ref>
+            </list>
+        </property>
+    </bean>
+    <bean id="course1" class = "sixthlesson.spring5.Course">
+        <property name="cname" value="张三"></property>
+    </bean>
+    <bean id="course2" class = "sixthlesson.spring5.Course">
+        <property name="cname" value="李四"></property>
+    </bean>
+    <bean id="book" class="sixthlesson.spring5.Book" scope="prototype">
+        <property name="list" ref="books"></property>
+    </bean>
+
+    <util:list id = "books">
+        <value>Java</value>
+        <value>DB</value>
+    </util:list>
+
+    <bean id="mybean" class="sixthlesson.spring5.MyBean">
+
+    </bean>
+</beans>
