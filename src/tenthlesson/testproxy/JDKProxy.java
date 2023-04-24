@@ -1,4 +1,4 @@
-package ninthlesson.testproxy;
+package tenthlesson.testproxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

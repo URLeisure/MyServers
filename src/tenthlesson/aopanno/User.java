@@ -1,4 +1,4 @@
-package ninthlesson.aopanno;
+package tenthlesson.aopanno;
 
 import org.springframework.stereotype.Component;
 

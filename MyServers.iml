@@ -27,6 +27,25 @@
           <file>file://$MODULE_DIR$/src/fifthlesson/bean2.xml</file>
           <file>file://$MODULE_DIR$/src/fourthandfifthlesson/bean1.xml</file>
         </fileset>
+        <fileset id="fileset5" name="Bean7" removed="false">
+          <file>file://$MODULE_DIR$/src/ninthlesson/bean7.xml</file>
+          <file>file://$MODULE_DIR$/src/fourthandfifthlesson/bean1.xml</file>
+          <file>file://$MODULE_DIR$/src/fifthlesson/bean2.xml</file>
+          <file>file://$MODULE_DIR$/src/sixthlesson/bean3.xml</file>
+          <file>file://$MODULE_DIR$/src/seventhcourse/bean4.xml</file>
+          <file>file://$MODULE_DIR$/src/seventhcourse/bean5.xml</file>
+          <file>file://$MODULE_DIR$/src/eighthlesson/bean6.xml</file>
+        </fileset>
+        <fileset id="fileset6" name="Bean8" removed="false">
+          <file>file://$MODULE_DIR$/src/tenthlesson/bean8.xml</file>
+          <file>file://$MODULE_DIR$/src/fourthandfifthlesson/bean1.xml</file>
+          <file>file://$MODULE_DIR$/src/fifthlesson/bean2.xml</file>
+          <file>file://$MODULE_DIR$/src/sixthlesson/bean3.xml</file>
+          <file>file://$MODULE_DIR$/src/seventhcourse/bean4.xml</file>
+          <file>file://$MODULE_DIR$/src/seventhcourse/bean5.xml</file>
+          <file>file://$MODULE_DIR$/src/eighthlesson/bean6.xml</file>
+          <file>file://$MODULE_DIR$/src/ninthlesson/bean7.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
@@ -62,5 +81,6 @@
     <orderEntry type="library" name="spring-aop-5.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="spring-aop-5.3.9" level="project" />
     <orderEntry type="library" name="com.springsource.net.sf.cglib-2.2.0" level="project" />
+    <orderEntry type="library" name="spring-jdbc-5.2.6.RELEASE" level="project" />
   </component>
 </module>
