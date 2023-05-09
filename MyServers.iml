@@ -49,6 +49,9 @@
         <fileset id="fileset7" name="Bean9" removed="false">
           <file>file://$MODULE_DIR$/src/tenthlesson/aopxml/bean9.xml</file>
         </fileset>
+        <fileset id="fileset8" name="Bean10" removed="false">
+          <file>file://$MODULE_DIR$/src/eleventhlesson/bean10.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
