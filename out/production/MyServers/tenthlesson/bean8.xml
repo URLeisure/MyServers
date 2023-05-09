@@ -9,4 +9,5 @@
     <context:component-scan base-package="tenthlesson.aopanno"></context:component-scan>
 
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
 </beans>
