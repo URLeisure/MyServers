@@ -24,6 +24,22 @@ public class Mytest {
         user.setUsername("java");
         user.setUstatus("alive");
         userService.addUser(user);
-
+    }
+    @Test
+    public void test2() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("eleventhlesson/bean10.xml");
+        UserService userService = applicationContext.getBean("userService", UserService.class);
+        User user = new User();
+        user.setUserId(4);
+        user.setUsername("update");
+        user.setUstatus("success");
+        userService.updateUser(user);
+    }
+    @Test
+    public void test3() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("eleventhlesson/bean10.xml");
+        UserService userService = applicationContext.getBean("userService", UserService.class);
+        int userid = 4;
+        userService.deleteUser(userid);
     }
 }
