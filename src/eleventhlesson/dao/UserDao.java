@@ -3,6 +3,7 @@ package eleventhlesson.dao;
 import eleventhlesson.entity.User;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author: 扑腾的江鱼
@@ -16,4 +17,10 @@ public interface UserDao {
     void update(User user);
 
     void delete(int id);
+
+    int selectCount();
+
+    User findUserInfo(int userid);
+
+    List<User> findAllUser();
 }

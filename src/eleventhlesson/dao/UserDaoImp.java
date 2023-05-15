@@ -2,8 +2,11 @@ package eleventhlesson.dao;
 
 import eleventhlesson.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 
 /**
@@ -37,5 +40,25 @@ public class UserDaoImp implements UserDao {
         String sql = "delete from user where userid = ?";
         int update = jdbcTemplate.update(sql,id);
         System.out.println(update);
+    }
+
+    public int selectCount(){
+        String sql = "select count(*) from user";
+        Integer count = jdbcTemplate.queryForObject(sql,Integer.class);
+        return count;
+    }
+
+    @Override
+    public User findUserInfo(int userid) {
+        String sql = "select * from user where userid = ?";
+        User user = jdbcTemplate.queryForObject(sql,new BeanPropertyRowMapper<User>(User.class),userid);
+        return user;
+    }
+
+    @Override
+    public List<User> findAllUser() {
+        String sql = "select * from user";
+        List<User> list = jdbcTemplate.query(sql,new BeanPropertyRowMapper<User>(User.class));
+        return list;
     }
 }

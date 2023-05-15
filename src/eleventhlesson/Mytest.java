@@ -25,6 +25,7 @@ public class Mytest {
         user.setUstatus("alive");
         userService.addUser(user);
     }
+
     @Test
     public void test2() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("eleventhlesson/bean10.xml");
@@ -35,11 +36,36 @@ public class Mytest {
         user.setUstatus("success");
         userService.updateUser(user);
     }
+
     @Test
     public void test3() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("eleventhlesson/bean10.xml");
         UserService userService = applicationContext.getBean("userService", UserService.class);
         int userid = 4;
         userService.deleteUser(userid);
+    }
+
+    @Test
+    public void test4() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("eleventhlesson/bean10.xml");
+        UserService userService = applicationContext.getBean("userService", UserService.class);
+        System.out.println(userService.findeCount());
+    }
+
+    @Test
+    public void test5() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("eleventhlesson/bean10.xml");
+        UserService userService = applicationContext.getBean("userService", UserService.class);
+        int userid = 24;
+        User user = userService.findUser(userid);
+
+        System.out.println(user.getUsername() + " " + user.getUstatus());
+    }
+
+    @Test
+    public void test6() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("eleventhlesson/bean10.xml");
+        UserService userService = applicationContext.getBean("userService", UserService.class);
+        userService.findAll().forEach(c -> System.out.println(c.getUserId() + " " + c.getUsername() + " "+c.getUstatus()));
     }
 }
