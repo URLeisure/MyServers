@@ -42,4 +42,11 @@ public class Mytest {
         int userid = 4;
         userService.deleteUser(userid);
     }
+
+    @Test
+    public void test4() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("eleventhlesson/bean10.xml");
+        UserService userService = applicationContext.getBean("userService", UserService.class);
+        System.out.println(userService.findeCount());
+    }
 }

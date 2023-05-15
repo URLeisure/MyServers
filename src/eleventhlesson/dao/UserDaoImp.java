@@ -38,4 +38,10 @@ public class UserDaoImp implements UserDao {
         int update = jdbcTemplate.update(sql,id);
         System.out.println(update);
     }
+
+    public int selectCount(){
+        String sql = "select count(*) from user";
+        Integer count = jdbcTemplate.queryForObject(sql,Integer.class);
+        return count;
+    }
 }

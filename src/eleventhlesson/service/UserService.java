@@ -28,4 +28,8 @@ public class UserService{
         userDao.delete(id);
     }
 
+    public int findeCount(){
+        return userDao.selectCount();
+    }
+
 }
